@@ -1,0 +1,52 @@
+\documentclass[12pt,a4paper,russian]{article}
+
+% Шрифты
+\usepackage{fontspec}
+\setmainfont{Times New Roman}
+\setsansfont{Calibri}
+\setmonofont{Consolas}
+
+% Русский язык
+\usepackage[russian]{babel}
+\addto{\captionsrussian}{%
+  \renewcommand{\refname}{Список использованных источников}
+}
+
+% Поля
+\usepackage[left=3.5cm, right=1.5cm, top=2cm, bottom=2cm]{geometry}
+
+% Интерлиньяж в 1.5 строки
+\usepackage{setspace}
+\setstretch{1.5}
+
+% Свойства PDF-документа
+\usepackage{hyperref}
+\hypersetup{
+  pdftitle={Скрябин Н.В. — Магистерская диссертация},
+}
+
+% Отступ в начале абзаца
+\usepackage{indentfirst}
+
+% Заполнение точками пропуска для секций в оглавлении
+\usepackage{tocloft}
+\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+
+\begin{document}
+
+\pagestyle{empty}
+\include{title}
+
+\pagestyle{plain}
+\tableofcontents
+
+\include{intro}
+\include{chapter1}
+\include{chapter2}
+\include{conclusion}
+
+\bibliographystyle{gost2008}
+\bibliography{sources}
+\addcontentsline{toc}{section}{\refname}
+
+\end{document}
