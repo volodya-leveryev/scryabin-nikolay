@@ -16,6 +16,11 @@
         <div class="col">
           <h1>Генератор эмодзи</h1>
           <form action="/emoji/" enctype="multipart/form-data" method="post">
+            {% if error %}
+            <div class="alert">
+              {{ error }}
+            </div>
+            {% endif %}
             <div class="mb-3">
               <label for="photo" class="form-label">Выберите фото:</label>
               <input type="file" name="photo" id="photo" class="form-control" />

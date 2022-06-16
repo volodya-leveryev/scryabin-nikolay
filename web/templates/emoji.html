@@ -14,8 +14,10 @@
     <div class="container">
       <div class="row">
         <div class="col">
-          <h1>Ваш эмодзи</h1>
-          <img src="{{ url_for('static', filename=filename) }}">
+          <h3>До</h3>
+          <img src="{{ url_for('static', filename=('inp_' + filename)) }}">
+          <h3>После</h3>
+          <img src="{{ url_for('static', filename=('out_' + filename)) }}">
         </div>
       </div>
     </div>

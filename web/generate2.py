@@ -63,7 +63,10 @@ def main():
     os.makedirs(os.path.join(dst_dir_path, "gt"), exist_ok=True)
     os.makedirs(os.path.join(dst_dir_path, "pred"), exist_ok=True)
 
-    ckpt = torch.load(os.path.join(exp_dir_path, "save", "27000.ckpt"))
+    ckpt = torch.load(
+        os.path.join(exp_dir_path, "save", "27000.ckpt"),
+        map_location=torch.device('cpu'),
+    )
     encoder.load_state_dict(ckpt["encoder"])
     decoder.load_state_dict(ckpt["decoder"])
 
