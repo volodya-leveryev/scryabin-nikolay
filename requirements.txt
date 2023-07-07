@@ -1,5 +1,5 @@
-Flask==2.3.2
-opencv-python==4.6.0.66
-scipy==1.9.3
-torchvision==0.14.0
-tqdm==4.64.1
+Flask
+opencv-python
+scipy
+torchvision
+tqdm
